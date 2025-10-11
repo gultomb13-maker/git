@@ -1,25 +1,28 @@
 #include <iostream>
 using namespace std;
 int main() {
-    const int SIZE = 10;
-    string cars[SIZE];
+    int SIZE;
+    string book [1005];
     string target;
-    int count = 0;
-    cout << "Masukkan " << SIZE << " mobil ke parkiran: ";
+    int counter = 0;
+    cout<<"Masukan jumlah buku dalam rak: ";
+    cin>>SIZE;
+    cout<<"Masukkan  jenis tiap Buku dalam rak: "<<endl;
     for (int i = 0; i < SIZE; i++) {
-        cin >> cars[i];
+        cout<<"Buku ";
+        cin >>book[i];
     }
-    cout << "Masukkan mobil yang ingin dicari: ";
+    cout << "Masukkan jenis buku yang ingin dicari: Buku ";
     cin >> target;
     for (int i = 0; i < SIZE; i++) {
-        if (cars[i] == target) {
-            count++;
+        if (book[i] == target) {
+            counter++;
         }
     }
-    if (count > 0) {
-        cout << "Mobil " << target << " ditemukan sebanyak " << count << " kali" << endl;
+    if (counter > 0) {
+        cout << "Buku " << target << " ditemukan sebanyak " << counter << " kali di dalam rak" << endl;
     } else {
-        cout << "Mobil " << target << " tidak ditemukan." << endl;
+        cout << "Buku " << target << " tidak ditemukan." << endl;
     }
     return 0;
 }
